@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;  
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+  min-height: 230vh;
+  background-color: #000;
+  
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+    z-index: 999;
+    transition: 0.6s;
+}
+
+.container_txt .section-main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 200px 100px;
+    font-size: 4vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
+    color: rgba(255, 255, 255, 0.8);
+    /*border: 2px #fff solid;*/
+}
+
+.container{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2vw;
+    bottom: 320px;
+    left: 100px;
+    font-weight: 800;
+}
+
+.container span{
+    position: relative;
+}
+
+.container span::before{
+    content: "Coder";
+    color: aqua;
+    animation: words 20s infinite;
+}
+
+.container span::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    border-left: -1px solid aqua;
+    right: -8px;
+    animation: cursor 0.5s infinite, typing 20s steps(14) infinite;
+}
+
+ @keyframes cursor {
+    to{
+        border-left: 2px solid aqua;
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "Coder";
+    }
+    21%,40%{
+        content: "Programmer";
+    }
+    41%,60%{
+        content: "Developer";
+    }
+    61%,80%{
+        content: "Designer";
+    }
+    81%,100%{
+        content: "Game maker";
+}
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+header.sticky{
+    background-color: #c50e1a;
+    padding: 10px 80px;
+    }
+
+header .brand{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    }
+
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 30px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    transition: 0.3s;
+    transition-property: color, background;
+}
+
+header .menu a:hover{
+    color: #000;
+    background: #fff;
+}
+
+header .btn{
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+.section-two {
+    min-height: 100vh;
+    background: #222;
+    padding: 20px 100px;
+}
+
+.section-two h2{
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 30px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.section-two p {
+    font-size: 18px;
+    margin: 30px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1024px) {
+    header .btn{
+      display: block;
+    }
+  
+    header .menu.active{
+      right: 0;
+    }
+  
+    header .menu{
+      position: fixed;
+      background: #a81b24;
+      flex-direction: column;
+      min-width: 400px;
+      height: 100vh;
+      top: 0;
+      right: -100%;
+      padding: 80px 50px;
+      transition-property: right;
+      transition: 0.5s;
+    }
+  
+    header .menu .close-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 25px;
+    }
+  
+    header .menu a{
+      display: block;
+      font-size: 16px;
+      margin: 20px;
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .section-main h1{
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+
+.about-me{
+    position: relative;
+    color: #fff;
+    font-size: 4vw;
+    display: flex;
+    max-width: fit-content;
+    margin-inline: auto;
+    text-decoration: underline #c50e1a;
+    padding: 100px; 
+}
+
+
+
+.container{
+  width: 400px;
+  margin: 0 auto;
+}
+@keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-webkit-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-moz-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-o-keyframes load{
+  from {
+    width: 0%
+  }
+}
+
+
+  ::selection {
+    color: #fff;
+    background: #6665ee;
+  }
+  
+  .skill-bars {
+    position: relative;
+    padding: 25px 30px;
+    width: 1300px;
+    background: #000;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  
+  }
+  
+  .skill-bars .bar {
+    margin: 20px 0;
+    color: #fff;
+  }
+  
+  .skill-bars .bar:first-child {
+    margin-top: 0px;
+  }
+  
+  .skill-bars .bar .info {
+    margin-bottom: 5px;
+  }
+  
+  .skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+  }
+  
+  @keyframes showText {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+      0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  
+  @keyframes animate {
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+  .bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #ff4757;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  
+  .bar .progress-line.html span {
+    width: 90%;
+  }
+  
+  .bar .progress-line.css span {
+    width: 60%;
+  }
+  
+  .bar .progress-line.jquery span {
+    width: 85%;
+  }
+  
+  .bar .progress-line.python span {
+    width: 50%;
+  }
+  
+  .bar .progress-line.mysql span {
+    width: 75%;
+  }
+  
+  .progress-line span::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  
+  .progress-line span::after {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  
+  @keyframes showText2 {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .progress-line.html span::after {
+    content: "90%";
+  }
+  
+  .progress-line.css span::after {
+    content: "60%";
+  }
+  
+  .progress-line.jquery span::after {
+    content: "85%";
+  }
+  
+  .progress-line.python span::after {
+    content: "50%";
+  }
+  
+  .progress-line.mysql span::after {
+    content: "75%";
+  }
+  
+  
+  
+  
+
+  a {
+    text-decoration: none;
+    color: #a81b24;
+    
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  a img.icon {
+    display: inline-block;
+    width: 1.2em;
+    margin-left: .6rem;
+  }
+  
