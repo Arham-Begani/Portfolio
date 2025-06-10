@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arham Begani</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="" class="brand">Arham Begani</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="#">Home</a>
+        <a href="#about-me">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>  
+
+    <div class="container_txt">
+        <section class="section-main">
+        Hi! I am Arham Begani
+        </section>
+        
+    </div>
+
+    <div class="container">
+        I'm a <span class="auto-type"></span>
+    </div>
+
+
+    
+    <div id="about-me">
+      <p class="about-me">Skills</p>
+      <div class="skill-bars">
+
+        <div class="bar">
+          <div class="info">
+            <span>HTML</span>
+          </div>
+          <div class="progress-line html">
+            <span></span>
+          </div>
+        </div>
+      
+        <div class="bar">
+          <div class="info">
+            <span>CSS</span>
+          </div>
+          <div class="progress-line css">
+            <span></span>
+          </div>
+        </div>
+      
+        <div class="bar">
+          <div class="info">
+            <span>React</span>
+          </div>
+          <div class="progress-line jquery">
+            <span></span>
+          </div>
+        </div>
+      
+        <div class="bar">
+          <div class="info">
+            <span>Python</span>
+          </div>
+          <div class="progress-line python">
+            <span></span>
+          </div>
+        </div>
+      
+        <div class="bar">
+          <div class="info">
+            <span>React native</span>
+          </div>
+          <div class="progress-line mysql">
+            <span></span>
+          </div>
+        </div>
+      
+      </div>
+      
+
+    </div>
+     
+    
+    <script>
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle('sticky', window.scrollY > 0);
+      });
+
+      var menu = document.querySelector('.menu');
+      var menuBtn = document.querySelector('.menu-btn');
+      var closeBtn = document.querySelector('.close-btn');
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.add('active');
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menu.classList.remove('active');
+      });
+    </script>
+
+  </body>
+</html>
